@@ -7,14 +7,13 @@ const testVersion = 6
 
 // func Distance returns the Hamming Distance between 2 strings
 func Distance(a, b string) (int, error) {
-	distance := 0
-
 	// only valid for strings of equal lengths
 	if len(a) != len(b) {
 		return -1, errors.New("Undefined for unequal sequence lengths")
 	}
 
 	// compare strings
+        distance := 0
 	for idx, char := range a {
 		if b[idx] != byte(char) {
 			distance += 1
