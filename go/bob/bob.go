@@ -10,24 +10,20 @@ const testVersion = 3
 
 // Hey responds with eloquence and charm
 func Hey(s string) string {
-	// shouted at
+	s = strings.TrimSpace(s)
+
 	hasLetters, _ := regexp.MatchString("[a-zA-Z]", s)
 	if s == strings.ToUpper(s) && hasLetters {
 		return "Whoa, chill out!"
 	}
 
-	// questioned
-	endsWithQuestion, _ := regexp.MatchString("\\?[[:space:]]*$", s)
-	if endsWithQuestion {
+	if strings.HasSuffix(s, "?") {
 		return "Sure."
 	}
 
-	// silence
-	isWhitespace, _ := regexp.MatchString("^[[:space:]]+$", s)
-	if len(s) == 0 || isWhitespace {
+	if s == "" {
 		return "Fine. Be that way!"
 	}
 
-	//normal response
 	return "Whatever."
 }
