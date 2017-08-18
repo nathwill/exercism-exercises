@@ -6,6 +6,7 @@ import "fmt"
 const testVersion = 4
 const day = 24 * 60
 
+// Clock represents the number of minutes
 type Clock int
 
 // New returns a Clock given an hour and minute

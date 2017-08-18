@@ -1,8 +1,9 @@
-// Package erratum
+// Package erratum contains errata related to error handling
 package erratum
 
 const testVersion = 2
 
+// Use Frobs a resource given a ResourceOpener and an input to Frob with
 func Use(opener ResourceOpener, input string) (err error) {
 	var res Resource
 	// open the resource, retrying in case of TransientError

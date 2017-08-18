@@ -17,7 +17,7 @@ func IsPangram(s string) bool {
 
 	for _, char := range alphabet {
 		if strings.Contains(s, string(char)) {
-			count += 1
+			count++
 		}
 	}
 

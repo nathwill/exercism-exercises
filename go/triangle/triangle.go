@@ -7,7 +7,7 @@ import (
 )
 
 const (
-	testVersion = 3
+	testVersion = 3 // match the testVersion for our test package
 	NaT         = iota // not a triangle
 	Equ         = iota // equilateral
 	Iso         = iota // isosceles
@@ -15,8 +15,10 @@ const (
 	Deg         = iota // degenerate
 )
 
+// Kind reflects the triangle type enumerated by the exported constants
 type Kind int
 
+// KindFromSides detects the kind of triangle from the lengths of its sides
 func KindFromSides(a, b, c float64) Kind {
 	sides := []float64{a, b, c}
 	sort.Sort(sort.Float64Slice(sides))

@@ -6,7 +6,7 @@ import (
 
 const testVersion = 2
 
-// greet user by name if given, or greet everyone
+// HelloWorld greets user by name if given, or greets everyone
 func HelloWorld(n string) string {
 	greet := "World"
 
